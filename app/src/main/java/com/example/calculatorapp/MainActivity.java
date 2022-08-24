@@ -23,54 +23,77 @@ public class MainActivity extends AppCompatActivity {
         EditText number2ET = findViewById(R.id.num2ET);
         TextView numberSumTV = findViewById(R.id.resultTV);
 
-        int num1 = Integer.parseInt((number1ET.getText().toString()));
-        int num2 = Integer.parseInt((number2ET.getText().toString()));
-        int sum = num1 + num2;
+        try {
+            int num1 = Integer.parseInt((number1ET.getText().toString()));
+            int num2 = Integer.parseInt((number2ET.getText().toString()));
+            int sum = num1 + num2;
+            numberSumTV.setText("" + sum);
 
-        numberSumTV.setText("" + sum);
+        }
+        catch(Exception e) {
+            numberSumTV.setText("Sorry, please enter number!!");
+        }
     }
     public void findSub(View view) {
         EditText number1ET = findViewById(R.id.num1ET);
         EditText number2ET = findViewById(R.id.num2ET);
         TextView numberSumTV = findViewById(R.id.resultTV);
 
-        int num1 = Integer.parseInt((number1ET.getText().toString()));
-        int num2 = Integer.parseInt((number2ET.getText().toString()));
-        int sum = num1 - num2;
+        try {
+            int num1 = Integer.parseInt((number1ET.getText().toString()));
+            int num2 = Integer.parseInt((number2ET.getText().toString()));
+            int sum = num1 - num2;
+            numberSumTV.setText("" + sum);
+        }
+        catch (Exception e){
+            numberSumTV.setText("Sorry, please enter number!!");
 
-        numberSumTV.setText("" + sum);
+        }
+
     }
     public void findMult(View view) {
         EditText number1ET = findViewById(R.id.num1ET);
         EditText number2ET = findViewById(R.id.num2ET);
         TextView numberSumTV = findViewById(R.id.resultTV);
+        try {
+            int num1 = Integer.parseInt((number1ET.getText().toString()));
+            int num2 = Integer.parseInt((number2ET.getText().toString()));
+            int sum = num1 * num2;
+            numberSumTV.setText("" + sum);
+        }
+        catch (Exception e){
+            numberSumTV.setText("Sorry, please enter number!!");
+        }
 
-        int num1 = Integer.parseInt((number1ET.getText().toString()));
-        int num2 = Integer.parseInt((number2ET.getText().toString()));
-        int sum = num1 * num2;
-
-        numberSumTV.setText("" + sum);
     }
     public void findDiv(View view) {
         EditText number1ET = findViewById(R.id.num1ET);
         EditText number2ET = findViewById(R.id.num2ET);
         TextView numberSumTV = findViewById(R.id.resultTV);
+        try {
+            int num1 = Integer.parseInt((number1ET.getText().toString()));
+            int num2 = Integer.parseInt((number2ET.getText().toString()));
+            int sum = num1 / num2;
 
-        int num1 = Integer.parseInt((number1ET.getText().toString()));
-        int num2 = Integer.parseInt((number2ET.getText().toString()));
-        int sum = num1 / num2;
-
-        numberSumTV.setText("" + sum);
+            numberSumTV.setText("" + sum);
+        }
+        catch(Exception e){
+            numberSumTV.setText("Sorry, please enter number!!");
+        }
     }
     public void findPower(View view) {
         EditText number1ET = findViewById(R.id.num1ET);
         EditText number2ET = findViewById(R.id.num2ET);
         TextView numberSumTV = findViewById(R.id.resultTV);
-
-        int num1 = Integer.parseInt((number1ET.getText().toString()));
-        int num2 = Integer.parseInt((number2ET.getText().toString()));
-        int sum = (int) Math.pow(num1, num2);
-        numberSumTV.setText("" + sum);
+        try {
+            int num1 = Integer.parseInt((number1ET.getText().toString()));
+            int num2 = Integer.parseInt((number2ET.getText().toString()));
+            int sum = (int) Math.pow(num1, num2);
+            numberSumTV.setText("" + sum);
+        }
+        catch (Exception e){
+            numberSumTV.setText("Sorry, please enter number!!");
+        }
     }
     public void clearAll(View view) {
         EditText number1ET = findViewById(R.id.num1ET);
@@ -80,28 +103,28 @@ public class MainActivity extends AppCompatActivity {
         number1ET.setText("");
         number2ET.setText("");
     }
-    public void closeKeyboard()
-    {
-        // this will give us the view
-        // which is currently focus
-        // in this layout
-        View view = this.getCurrentFocus();
-
-        // if nothing is currently
-        // focus then this will protect
-        // the app from crash
-        if (view != null) {
-
-            // now assign the system
-            // service to InputMethodManager
-            InputMethodManager manager
-                    = (InputMethodManager)
-                    getSystemService(
-                            Context.INPUT_METHOD_SERVICE);
-            manager
-                    .hideSoftInputFromWindow(
-                            view.getWindowToken(), 0);
-        }
-    }
+//    public void closeKeyboard()
+//    {
+//        // this will give us the view
+//        // which is currently focus
+//        // in this layout
+//        View view = this.getCurrentFocus();
+//
+//        // if nothing is currently
+//        // focus then this will protect
+//        // the app from crash
+//        if (view != null) {
+//
+//            // now assign the system
+//            // service to InputMethodManager
+//            InputMethodManager manager
+//                    = (InputMethodManager)
+//                    getSystemService(
+//                            Context.INPUT_METHOD_SERVICE);
+//            manager
+//                    .hideSoftInputFromWindow(
+//                            view.getWindowToken(), 0);
+//        }
+//    }
 
 }
