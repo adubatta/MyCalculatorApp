@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
 
     public void findSum(View view) {
@@ -103,28 +104,16 @@ public class MainActivity extends AppCompatActivity {
         number1ET.setText("");
         number2ET.setText("");
     }
-//    public void closeKeyboard()
-//    {
-//        // this will give us the view
-//        // which is currently focus
-//        // in this layout
+//    public void closeKeyboard(){
 //        View view = this.getCurrentFocus();
-//
-//        // if nothing is currently
-//        // focus then this will protect
-//        // the app from crash
-//        if (view != null) {
-//
-//            // now assign the system
-//            // service to InputMethodManager
-//            InputMethodManager manager
-//                    = (InputMethodManager)
-//                    getSystemService(
-//                            Context.INPUT_METHOD_SERVICE);
-//            manager
-//                    .hideSoftInputFromWindow(
-//                            view.getWindowToken(), 0);
+//        if (view != null){
+//            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+//            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
 //        }
 //    }
+
+//    }
+   // https://stackoverflow.com/questions/1109022/how-to-close-hide-the-android-soft-keyboard-programmatically
+
 
 }
